@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortieren</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="headlink">
+            <a href="../index.html">
+                <div id="head">
+                    <h1>JavaScript Lernen</h1>
+                    <img src="../js.png" id="logo">
+                </div>
+            </a>
+        </div>
+        
+        <nav>
+            <a class="tabs" href="../wissenswertes/index.html">Wissenswertes</a>
+            <a class="tabs" href="../number_guessing/index.html">Zahlen Raten</a>
+            <a class="tabs" href="../stein-schere-papier/index.html">Schere, Stein, Papier</a>
+            <a class="tabs" href="../codebreaker/index.html">CodeBreaker</a>
+            <a class="tabs" href="../bubblesort/index.html">Liste sortieren</a>
+            <a class="tabs" href="../essen/index.html">Essen</a>
+            <a class="tabs" href="../quiz/index.html">Quiz</a>
+            <a class="tabs" href="../kopfrechnen/index.html">Kopfrechnen</a>
+        </nav>
+    </header>
+    <main>
+        <h3 id="display_liste"></h3>
+
+        <h2>Liste sortieren</h2>
+
+        <h4>Trage Text in das Eingabefeld ein und sieh wie die Liste sortiert wird:</h4>
+
+        <div id="formular">
+            <form onsubmit="eintragen(event); return false;">
+                <label for="txt_input">Text:</label>
+                <input id="txt_input" minlength="3" type="text" required>
+                <button type="submit" id="btn_eintragen">Eintragen</button>
+            </form>
+    
+            <button id="btn_sortieren" onclick="sortieren()">Sortieren</button>
+        </div>
+
+        <div id="listen">
+            <div>
+                <h4>Deine Liste (unsortiert):</h4>
+                <ul id="display_array">
+
+                </ul>
+            </div>
+
+            <div>
+                <h4>Deine Liste (sortiert):</h4>
+                <ul id="display_sort">
+
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        var liste = ["olaf", "gustaf", "rainer"];
+        var liste2 = ["michael", "karsten", "bastian"];
+
+        setTimeout(sort, 100, liste);
+        function sort(x) {
+            do {
+            var geändert = false;
+
+            for (var i = 0; i < x.length - 1; i++) {
+                if (x[i] > x[i + 1]) {
+                    var temp = x[i];
+                    x[i] = x[i + 1];
+                    x[i + 1] = temp;
+                    geändert = true;
+                    setTimeout(sort, 2000, liste);
+                }
+            }
+
+            } while (geändert);
+
+            //return MUSS hier hin weil der wert von x (also der liste) geeändert wird.
+            //sie wird sortiert.
+            //deshalb muss die neue geänderte liste wieder zurückgegeben werden.
+            return x;
+        }
+
+        alert(sort(liste2));
+        document.getElementById("display_liste"). innerHTML = liste;
+    </script>
+</body>

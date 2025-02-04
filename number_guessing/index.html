@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlen raten</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="headlink">
+            <a href="../index.html">
+                <div id="head">
+                    <h1>JavaScript Lernen</h1>
+                    <img src="../js.png" id="logo">
+                </div>
+            </a>
+        </div>
+        
+        <nav>
+            <a class="tabs" href="../wissenswertes/index.html">Wissenswertes</a>
+            <a class="tabs" href="../number_guessing/index.html">Zahlen Raten</a>
+            <a class="tabs" href="../stein-schere-papier/index.html">Schere, Stein, Papier</a>
+            <a class="tabs" href="../codebreaker/index.html">CodeBreaker</a>
+            <a class="tabs" href="../bubblesort/index.html">Liste sortieren</a>
+            <a class="tabs" href="../essen/index.html">Essen</a>
+            <a class="tabs" href="../quiz/index.html">Quiz</a>
+            <a class="tabs" href="../kopfrechnen/index.html">Kopfrechnen</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Rate die Zahl!</h2>
+        <h3 id="headline">Versuche: 0</h3>
+        <h4 id="tip">Tipp: </h4>
+
+        <form onsubmit="raten(); return false">
+            <label>Zahl:</label>
+            <input type="number" id="rate_zahl"required>
+            <button>Raten</button>
+        </form>
+    </main>
+
+    <script>
+
+        var random_zahl;
+        var versuche = 0;
+        random_zahl = Math.random() * 100;
+        random_zahl = Math.round( random_zahl );
+        console.log(random_zahl);
+
+        function raten() {
+            let rate_zahl = document.getElementById("rate_zahl").value;
+            versuche++;
+            document.getElementById("headline").innerHTML = "Versuche: " + versuche;
+            console.log(rate_zahl);
+
+            document.getElementById("rate_zahl").value = "";
+
+            if( rate_zahl > random_zahl ) {
+                document.getElementById("tip").innerHTML = "Tipp: Die Zahl ist kleiner!";
+            }
+
+            if( rate_zahl < random_zahl ) {
+                document.getElementById("tip").innerHTML = "Tipp: Die Zahl ist größer!";
+            }
+
+            if( rate_zahl == random_zahl ) {
+                document.getElementById("tip").innerHTML = "Gewonnen! 🥳🎉";
+                document.getElementById("headline").innerHTML = "Versuche: " + versuche + " (Gewonnen)";
+            }
+            console.log("Versuche: " + versuche);
+        }
+    </script>
+</body>
+</html>

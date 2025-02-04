@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schere-Stein-Papier</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="headlink">
+            <a href="../index.html">
+                <div id="head">
+                    <h1>JavaScript Lernen</h1>
+                    <img src="../js.png" id="logo">
+                </div>
+            </a>
+        </div>
+        
+        <nav>
+            <a class="tabs" href="../wissenswertes/index.html">Wissenswertes</a>
+            <a class="tabs" href="../number_guessing/index.html">Zahlen Raten</a>
+            <a class="tabs" href="../stein-schere-papier/index.html">Schere, Stein, Papier</a>
+            <a class="tabs" href="../codebreaker/index.html">CodeBreaker</a>
+            <a class="tabs" href="../bubblesort/index.html">Liste sortieren</a>
+            <a class="tabs" href="../essen/index.html">Essen</a>
+            <a class="tabs" href="../quiz/index.html">Quiz</a>
+            <a class="tabs" href="../kopfrechnen/index.html">Kopfrechnen</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Text -->
+        <div>
+            <h2>Schere - Stein - Papier</h2>
+            <div id="display_punkte">
+                <div>
+                    <h4>Deine Punkte:</h4>
+                    <h4>Gegner Punkte:</h4>
+                </div>
+
+                <div id="punkte_zahl">
+                    <h4 id="punkte_spieler">0</h4>
+                    <h4 id="punkte_gegner">0</h4>
+                </div>
+            </div>
+
+            <div id="display_seiten">
+                <h4>Hand des Gegners</h4>
+                <h4 style="margin-left: auto">Deine Hand</h4>
+            </div>
+        </div>
+        
+        <!-- Spielfeld -->
+        <div id="display_spiel">
+            <div id="img_pc">
+                <img id="1"src="schere.png">
+                <img id="2"src="stein.png">
+                <img id="3"src="papier.png">
+            </div>
+
+            <div id="img_spieler">
+                <form onclick="hide(1)"><img id="schere" src="schere.png"></form>
+                <form onclick="hide(2)"><img id="stein" src="stein.png"></form>
+                <form onclick="hide(3)"><img id="papier" src="papier.png"></form>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div id="display_start">
+            <button id="btn_start" onclick="fight()"><b>Spiel starten</b></button>
+        </div>
+
+        <div id="display_start">
+            <button id="btn_neustart" onclick="neustart()"><b>Neustart</b></button>
+        </div>
+
+        <!-- Spielende Text -->
+        <div id="display_ende">
+            <h3 id="text_ende"></h3>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

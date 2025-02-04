@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopfrechnen</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="headlink">
+            <a href="../index.html">
+                <div id="head">
+                    <h1>JavaScript Lernen</h1>
+                    <img src="../js.png" id="logo">
+                </div>
+            </a>
+        </div>
+        
+        <nav>
+            <a class="tabs" href="../wissenswertes/index.html">Wissenswertes</a>
+            <a class="tabs" href="../number_guessing/index.html">Zahlen Raten</a>
+            <a class="tabs" href="../stein-schere-papier/index.html">Schere, Stein, Papier</a>
+            <a class="tabs" href="../codebreaker/index.html">CodeBreaker</a>
+            <a class="tabs" href="../bubblesort/index.html">Liste sortieren</a>
+            <a class="tabs" href="../essen/index.html">Essen</a>
+            <a class="tabs" href="../quiz/index.html">Quiz</a>
+            <a class="tabs" href="../kopfrechnen/index.html">Kopfrechnen</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div id="display_quiz">
+                <h3 id="overline">Kopfrechnen</h3>
+                <h4 id="level">Level 1</h4>
+
+                <button onclick="los()">Los gehts!</button>
+                <br>
+
+                <p id="question"><i>Frage</i></p>                
+
+                <div>
+                    <form onsubmit="return raten();">
+                        <input id="eingabe" type="number" id="eingabe" required min="0">
+                    </form>
+                </div>
+
+                <p id="antwort"><i>Antwort</i></p>
+            </div>
+
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>

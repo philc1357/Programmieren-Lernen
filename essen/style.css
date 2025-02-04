@@ -1,0 +1,81 @@
+main {
+    margin: 25px;
+}
+
+#anforderung {
+    display: inline-block;
+}
+
+#mehr {
+    background: rgb(230,240,240);
+    background: linear-gradient(150deg, rgba(230,240,240,1) 0%, rgba(216,231,231,1) 100%);
+    display: block;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 50px;
+    margin-bottom: 30px;
+    width:850px;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-2deg);
+}
+
+#naehrstoffmangel {
+    background: rgb(230,240,240);
+    background: linear-gradient(150deg, rgba(230,240,240,1) 0%, rgba(216,231,231,1) 100%);
+    display: block;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 50px;
+    margin-bottom: 30px;
+    width:180px;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-2deg);
+}
+
+.overline {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#overline_mehr {
+    display: inline;
+    padding:5px;
+    background:#83ff89;
+    border:1px solid #222;
+    box-shadow:3px 3px 0 #222;
+}
+
+#overline_mangel {
+    display: inline;
+    padding:5px;
+    background:#ff8383;
+    border:1px solid #222;
+    box-shadow:3px 3px 0 #222;
+}
+
+#mehr_details {
+    display: flex;
+    gap: 30px;
+    
+}
+
+.list_overline {
+    font-size: 17px;
+    background-color: rgb(255, 255, 61);
+    border:1px solid #222;
+    box-shadow:3px 3px 0 #222;
+    padding: 2px;
+}
+
+.box2{
+    width:350px;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-2deg);
+  }
+
+

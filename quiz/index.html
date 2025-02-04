@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlen raten</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="headlink">
+            <a href="../index.html">
+                <div id="head">
+                    <h1>JavaScript Lernen</h1>
+                    <img src="../js.png" id="logo">
+                </div>
+            </a>
+        </div>
+        
+        <nav>
+            <a class="tabs" href="../wissenswertes/index.html">Wissenswertes</a>
+            <a class="tabs" href="../number_guessing/index.html">Zahlen Raten</a>
+            <a class="tabs" href="../stein-schere-papier/index.html">Schere, Stein, Papier</a>
+            <a class="tabs" href="../codebreaker/index.html">CodeBreaker</a>
+            <a class="tabs" href="../bubblesort/index.html">Liste sortieren</a>
+            <a class="tabs" href="../essen/index.html">Essen</a>
+            <a class="tabs" href="../quiz/index.html">Quiz</a>
+            <a class="tabs" href="../kopfrechnen/index.html">Kopfrechnen</a>
+        </nav>
+    </header>
+
+    <main>
+        <img id="img_start" onclick="start()" src="ant.png" alt="">
+
+        <section>
+            <div id="display_quiz">
+                <h3 id="overline">Klicke innerhalb des Zeitlimits auf die Richtige Antwort!</h3>
+
+                <p id="txt_frage"></p>
+
+                <h3 id="txt_timer">Timer</h3>
+
+                <div id="div_buttons">
+                    <button id="btn_start" onclick="los()">Start</button>
+                    <!-- <button id="btn_weiter" onclick="weiter()">Weiter</button> -->
+                </div>
+        
+                <div id="btns_antwort">
+                    <p id="1" class="btn_antwort" onclick="raten(this)">Antwort</p>
+                    <p id="2" class="btn_antwort" onclick="raten(this)">Antwort</p>
+                    <p id="3" class="btn_antwort" onclick="raten(this)">Antwort</p>
+                </div>
+            </div>
+
+            <div id="ergebnis">
+                <div class="ergebnis">
+                    <h3>Richtige Antworten:</h3>
+                    <h3 style="margin-left: 10px" id="punkte">0</h3>
+                </div>
+
+                <div class="ergebnis">
+                    <h3>Falsche Antworten:</h3>
+                    <h3 style="margin-left: 10px" id="fehler">0</h3>
+                </div>
+            </div>
+
+            <div id="display_regeln">
+                <p id="txt_regeln_overline">Regeln:</p>
+                <p class="txt_regeln">- Du hast 8 Sekunden Zeit zum Antworten.</p>
+                <p class="txt_regeln">- Du kannst deine Antwort nach dem Klicken nicht mehr ändern.</p>
+                <p class="txt_regeln">- Du kannst nur einmal pro Frage raten.</p>
+                <p class="txt_regeln">- Klicke auf <b><i>Start</i></b> wenn du bereit bist.</p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>

@@ -1,0 +1,19 @@
+#display_sortieren {
+    display: flex;
+}
+
+#formular {
+    display: flex;
+}
+
+#btn_sortieren {
+    margin-left: 4px;
+    background-color: rgb(78, 207, 78);
+    border-radius: 3px;
+}
+
+#listen {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}

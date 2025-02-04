@@ -1,0 +1,54 @@
+#txt_titel {
+    text-shadow: grey 3px 3px 3px;
+}
+
+#display_main {
+    opacity: 0;
+}
+
+#spiel {
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(209, 255, 217);
+}
+
+#input {
+    display: flex;
+}
+
+#eingabe {
+    width: 110px;
+}
+
+#neustart {
+    margin-left: 4px;
+    background-color: orange;
+    border-radius: 3px;
+}
+
+#neustart:hover {
+    margin-left: 4px;
+    background-color: rgb(224, 146, 0);
+    border-radius: 3px;
+}
+
+#aufgeben {
+    margin-left: 4px;
+    background-color: rgb(255, 57, 57);
+    border-radius: 3px;
+}
+
+#aufgeben:hover {
+    margin-left: 4px;
+    background-color: rgb(220, 57, 57);
+    border-radius: 3px;
+}
+
+.input_notizen {
+    width: 30px;
+    height: 20px;
+    font-size: large;
+    font-weight: bold;
+}

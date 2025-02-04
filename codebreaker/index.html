@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBreaker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="headlink">
+            <a href="../index.html">
+                <div id="head">
+                    <h1>JavaScript Lernen</h1>
+                    <img src="../js.png" id="logo">
+                </div>
+            </a>
+        </div>
+        
+        <nav>
+            <a class="tabs" href="../wissenswertes/index.html">Wissenswertes</a>
+            <a class="tabs" href="../number_guessing/index.html">Zahlen Raten</a>
+            <a class="tabs" href="../stein-schere-papier/index.html">Schere, Stein, Papier</a>
+            <a class="tabs" href="../codebreaker/index.html">CodeBreaker</a>
+            <a class="tabs" href="../bubblesort/index.html">Liste sortieren</a>
+            <a class="tabs" href="../essen/index.html">Essen</a>
+            <a class="tabs" href="../quiz/index.html">Quiz</a>
+            <a class="tabs" href="../kopfrechnen/index.html">Kopfrechnen</a>
+        </nav>
+    </header>        
+    
+    <main>
+        <h2 onclick="start()" id="txt_titel">CodeBreaker...&#128272</h2>
+
+        <section id="display_main">
+            <h3>Knacke den <u>5-stelligen</u> Code!</h3>
+
+            <div id="spiel">
+                <h3 id="txt_versuche">Versuche: 0</h3>
+    
+                <h4 id="txt_richtige_stellen">0 der geratenen Zahlen kommen an richtiger Stelle vor.</h4>
+                <h4 id="txt_richtige_zahlen">0 der geratenen Zahlen kommen im Code vor.</h4>
+        
+                <div id="input">
+                    <form onsubmit="raten(event)">
+                        <input id="eingabe" type="number" maxlength="3" placeholder="Zahl eingeben..." required>
+                        <button>Raten</button>
+                    </form>
+        
+                    <button id="neustart" onclick="neustart()">Neustart</button>
+                    <button id="aufgeben" onclick="aufgeben()">Aufgeben</button>
+                </div>
+            </div>
+
+            <div>
+                <h3>Platz für Notizen:</h3>
+
+                <div>
+                    <input class="input_notizen" type="number" min="0">
+                    <input class="input_notizen" type="number" min="0">
+                    <input class="input_notizen" type="number" min="0">
+                    <input class="input_notizen" type="number" min="0">
+                    <input class="input_notizen" type="number" min="0">
+                </div>
+            </div>
+        </section>
+
+        <p id="txt_code"></p>
+
+        <h3 id="code"></h3>
+    </main>
+
+    <script src="script.js"></script>
+</body>

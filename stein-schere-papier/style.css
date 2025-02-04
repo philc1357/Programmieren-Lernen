@@ -1,0 +1,63 @@
+img {
+    height: 50px;
+}
+
+#display_spiel {
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    width: 300px;
+    height: 200px;
+}
+
+#img_spieler {
+    display: grid;
+    gap: 10px;
+    transform: scaleX(-1);
+    margin-left: auto;
+    margin-top: 5px;
+}
+
+#img_pc {
+    display: grid;
+    align-items: center;
+    gap: 10px;
+}
+
+#display_punkte {
+    display: flex;
+    width: 150px;
+}
+
+#punkte_zahl {
+    margin-left: auto;
+}
+
+#display_start {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#display_seiten {
+    display: flex;
+    width: 300px;
+    margin-bottom: -20px;
+}
+
+#display_ende {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: -270px;
+}
+
+#text_ende {
+    /* display: none; */
+    transform: scaleZ(1);
+}
